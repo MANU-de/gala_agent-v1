@@ -66,4 +66,4 @@ with st.sidebar:
         "Alfred is an AI agent powered by Agentic RAG, designed to assist with gala management. "
         "He uses an LLM (Gemini 2.5 Flash), a custom knowledge base, and external tools to answer your questions intelligently."
     )
-    st.write("Project by [Manuela Schrittwieser/GitHub Profile Link]")
+    st.write("Project by [Manuela Schrittwieser/https://github.com/MANU-de]")
