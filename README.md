@@ -74,12 +74,100 @@ To provide a more natural and engaging interaction with Alfred, a user-friendly 
 1. Ensure your virtual environment is active.  
 2. Navigate to the project's root directory in your terminal.  
 3. Run the Streamlit application:  
-4. codeBash  
-5. streamlit run app.py  
-6. Your default web browser will open, displaying the chat interface (usually at http://localhost:8501).  
-7. Type your questions into the input box and press Enter to interact with Alfred\!
+ 
+ ```streamlit run app.py```  
+
+4. Your default web browser will open, displaying the chat interface (usually at http://localhost:8501).  
+5. Type your questions into the input box and press Enter to interact with Alfred\!
 
 <img width="1633" height="740" alt="Screenshot 2025-09-05 3 40 54 PM" src="https://github.com/user-attachments/assets/a852012f-f048-4571-a93f-c770fadfa273" />
 
 
 *A screenshot of Alfred's Streamlit web interface, showing a typical chat interaction with the user asking about a guest's interests.*
+
+## **Getting Started**
+
+Follow these steps to set up and run Alfred the Gala Host on your local machine.
+
+### **Prerequisites**
+
+* Python 3.8+  
+* An API Key (for the LLM)
+
+### **Installation**
+
+**Clone the Repository**:  
+
+ ```git clone https://github.com/your-username/alfred-gala-host.git```
+ ```cd alfred-gala-host``` 
+
+ **Create a Virtual Environment**:  
+
+```python \-m venv venv```
+```source venv/bin/activate \# On Windows, use \`venv\\Scripts\\activate\` ```
+
+**Install Dependencies**:
+
+  ```pip install \-r requirements.txt```  
+  
+  ### **Configuration**
+
+  **Environment Variables**:
+  
+   Create a .env file in the root directory of the project:  
+  
+    \_API\_KEY="your\_openai\_api\_key\_here"
+    Replace "your\_api\_key\_here" with your actual API key.  
+   (Note: Open-Meteo.com does not require an API key, so no OPENWEATHER\_API\_KEY is needed for this version.)
+
+   ### **Running the Agent**
+
+You have two ways to interact with Alfred:
+
+1. **Command-Line Interface (CLI)**: For testing core functionality and seeing verbose agent logs.   
+
+   ```python alfred\_agent.py```  
+   (The agent's internal thought process will be printed directly to your terminal.)
+     
+2. **Web Interface (Streamlit)**: For a user-friendly, interactive chat experience.  
+   
+   ```streamlit run app.py```  
+   (This will open the interface in your web browser.)
+
+## **Project Structure**
+
+
+```
+alfred-gala-host/  
+├── .env                  \# Environment variables (API keys)  
+├── data/                 \# Static data for the RAG system  
+│   ├── guests.json       \# Guest information (interests, background, gossip, fun facts)  
+│   ├── menu.md           \# Gala dinner menu details  
+│   └── schedule.md       \# Event schedule and timings  
+├── app.py                \# Streamlit web interface for interactive chat with Alfred  
+├── gala\_rag.py           \# Handles data loading, chunking, embeddings, and vector store operations (FAISS)  
+├── gala\_tools.py         \# Defines external tools Alfred can use (e.g., get\_current\_weather)  
+├── alfred\_agent.py       \# Main script: Orchestrates the LLM agent, RAG, and tools  
+└── requirements.txt      \# Python dependencies
+```
+## **Expanding Alfred's Capabilities (Future Work)**
+
+This project provides a robust foundation, but Alfred can become even more capable:
+
+* **Persistent Vector Store**: Implement saving and loading of the FAISS index to disk (FAISS.save\_local()) to avoid re-embedding data on every run.  
+* **Enhanced Tools**:  
+  * **Calendar Management**: A tool to manage and modify the event schedule dynamically.  
+  * **Seating Chart Management**: A tool to look up guest seating or make real-time adjustments.  
+  * **Web Search**: Integrate a general web search tool (e.g., DuckDuckGo Search) for questions outside the internal knowledge base.  
+  * **Communication**: A simulated tool for Alfred to "message" staff or guests.  
+   
+* **Advanced Memory**: Implement more sophisticated memory management (e.g., ConversationSummaryBufferMemory in LangChain) for multi-turn conversations and long-term context.  
+* **Dynamic Data Updates**: Tools or mechanisms for Alfred to ingest and update new information about the gala or guests during the event.
+
+## **Contribution**
+
+Contributions are welcome\! If you have suggestions for new features, improvements, or bug fixes, please open an issue or submit a pull request.
+
+## **License**
+
+This project is open-source and available under the [MIT License](http://LICENSE).
