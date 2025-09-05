@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Dr. Eleanor Vance",
+    "interests": ["astrophysics", "classical music", "mountain climbing"],
+    "background": "Renowned astrophysicist, discovered a new exoplanet.",
+    "gossip": "Rumored to be developing a revolutionary new telescope.",
+    "fun_fact": "Can recite the first 100 digits of Pi from memory."
+  },
+  {
+    "name": "Chef Antoine Dubois",
+    "interests": ["molecular gastronomy", "sustainability", "impressionist art"],
+    "background": "Michelin-starred chef, famous for his avant-garde cuisine.",
+    "gossip": "Just opened a new pop-up restaurant that's impossible to get a reservation for.",
+    "fun_fact": "Once cooked a meal for the Queen using only foraged ingredients."
+  },
+  {
+    "name": "Soprano Isabella Rossi",
+    "interests": ["opera", "equestrian sports", "vintage wines"],
+    "background": "World-famous opera singer, known for her powerful voice.",
+    "gossip": "Preparing for a new role in a groundbreaking modern opera.",
+    "fun_fact": "Fluent in five languages and can sing in all of them."
+  },
+  {
+    "name": "Sir Reginald Finch-Hatton",
+    "interests": ["polo", "classic literature", "philanthropy"],
+    "background": "Distinguished philanthropist and avid polo player.",
+    "gossip": "Recently donated a significant sum to a rare book collection.",
+    "fun_fact": "Owns one of the oldest vintage car collections in Europe."
+  },
+  {
+    "name": "Professor Aris Thorne",
+    "interests": ["quantum physics", "ancient history", "chess"],
+    "background": "Nobel laureate in Physics, specializing in quantum entanglement.",
+    "gossip": "Working on a theory that could unify all forces of nature.",
+    "fun_fact": "Holds a grandmaster title in chess."
+  }
+]
