@@ -103,12 +103,15 @@ Follow these steps to set up and run Alfred the Gala Host on your local machine.
 
  **Create a Virtual Environment**:  
 
-```python \-m venv venv```
-```source venv/bin/activate \# On Windows, use \`venv\\Scripts\\activate\` ```
+```python -m venv .venv``` ```source venv/bin/activate```
+
+ On Windows, use 
+ ```python -m venv .venv```  
+ ```.\.venv\Scripts\activate```
 
 **Install Dependencies**:
 
-  ```pip install \-r requirements.txt```  
+  ```pip install -r requirements.txt```  
   
   ### **Configuration**
 
@@ -116,9 +119,9 @@ Follow these steps to set up and run Alfred the Gala Host on your local machine.
   
    Create a .env file in the root directory of the project:  
   
-    \_API\_KEY="your\_openai\_api\_key\_here"
-    Replace "your\_api\_key\_here" with your actual API key.  
-   (Note: Open-Meteo.com does not require an API key, so no OPENWEATHER\_API\_KEY is needed for this version.)
+    API_KEY="your_api_key_here"
+    Replace "your_api_key_here" with your actual API key.  
+   (Note: Open-Meteo.com does not require an API key, so no OPENWEATHER_API_KEY is needed for this version.)
 
    ### **Running the Agent**
 
@@ -126,7 +129,7 @@ You have two ways to interact with Alfred:
 
 1. **Command-Line Interface (CLI)**: For testing core functionality and seeing verbose agent logs.   
 
-   ```python alfred\_agent.py```  
+   ```python alfred_agent.py```  
    (The agent's internal thought process will be printed directly to your terminal.)
      
 2. **Web Interface (Streamlit)**: For a user-friendly, interactive chat experience.  
